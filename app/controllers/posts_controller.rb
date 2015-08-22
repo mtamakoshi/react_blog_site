@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @presenter = {
+    @presenting = {
       posts: Post.last(5).reverse,
       form: {
         action: posts_path,
@@ -74,6 +74,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :photo)
     end
 end

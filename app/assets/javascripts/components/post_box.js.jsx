@@ -1,10 +1,8 @@
-var PostBox = React.createdClass({
+var PostBox = React.createClass({
 	getInitialState: function() {
-		return
-			JSON.parse(this.props.presenter);  //presenter represents posts (see controller)
+		return JSON.parse(this.props.presenting);  //presenting represents posts (see controller
 	},
-	handlePostSubmit: function() {
-		return
+	handlePostSubmit: function(formData, action) {
 		$.ajax({
 			data: formData,
 			url: action,
@@ -18,9 +16,15 @@ var PostBox = React.createdClass({
 	render: function() {
 		return (
 			<div className="post-box">
-			<PostForm form={this.state.form} onPostSubmit={this.handlePostSubmit} />			
-			<PostList posts={this.state.posts} />
+			  <div className="post-container">
+			  <PostForm form={this.state.form} onPostSubmit={this.handlePostSubmit} />	
+			  </div>		
+			  <PostList posts={this.state.posts} />
 			</div>
+
 		);
 	}
 });
+
+
+
