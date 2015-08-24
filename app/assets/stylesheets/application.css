@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,300);
+@import url(http://fonts.googleapis.com/css?family=Ek+Mukta:400,800,200,300);
+@import url(http://fonts.googleapis.com/css?family=Fanwood+Text:400,400italic);
+
+body {
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: light;
+}
