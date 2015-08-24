@@ -1,19 +1,46 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,300);
 @import url(http://fonts.googleapis.com/css?family=Ek+Mukta:400,800,200,300);
 @import url(http://fonts.googleapis.com/css?family=Fanwood+Text:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,300,700);
+@import url(https://fonts.googleapis.com/css?family=Macondo+Swash+Caps);
 //////////**********PostDetail***********//////////
 .postDetail {
-
+	margin-top: 30px;
 	border: 1px solid rgba(0,0,0,0.1);
 	border-shadow: 0 1px 0 rgba(255,255,255,1);
 	hr {
 	@extend .postDetail;
 	}
-
 }
+.backBtnBox {
+	margin-top: 30px;
+}
+.backBtn {
+	width: 120px;
+	height: 50px;
+	border: 1px solid #000;
+	color: #222;
+	background-color: #FFF;
+	font-family: 'Fanwood Text', serif;
+	font-weight: lighter;
+	font-size: 14px;
+	padding: 15px 25px;
+	text-transform: uppercase;
+	text-align: center;
+	transition-property: background-color color;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+
+	.backBtn:hover {
+	  	background-color: #222;
+		color: #FFF;
+  }
+
+
+
 //////////********** Post/PostList**********//////////
 
 .post {
@@ -55,21 +82,11 @@
 	}
 	.btn {
 		margin-top: 30px;
+		float: right;
 	}
 	.button {
-		width: 120px;
-		height: 50px;
-		border: 1px solid #000;
-		background-color: #FFF;
-		font-family: 'Fanwood Text', serif;
-		font-weight: lighter;
-		font-size: 14px;
-		padding: 15px 25px;
-		text-transform: uppercase;
-		text-align: center;
-		transition-property: background-color color;
-		transition-duration: 0.3s;
-		transition-timing-function: linear;
+		@extend .backBtn;
+
 	}
 	.button:hover {
 		background-color: #222;
@@ -90,12 +107,13 @@
 }
 form {
 	.formBox {
+		border: 1px solid #222;
 		font-size: 15px;
 		font-family: 'Ek Mukta', sans-serif;
 		width: 50%;
 		height: 150px;
 		padding: 10px;
-		margin: 10px 15%;
+		margin: 10px 25%;
 	}
 	input.formBox {
 		height: 50px;
@@ -106,7 +124,7 @@ form {
 		height: 50px;
 		border: 1px solid #222;
 		background-color: #FFF;
-		font-family: 'Fanwood Text', serif;
+		font-family: 'Ek Mukta', sans-serif;
 		font-weight: lighter;
 		font-size: 14px;
 		padding: 15px 25px;
@@ -114,7 +132,6 @@ form {
 		text-align: center;
 	}
 	button, .fileUploader {
-		
-		float: right;
+		margin-left: 64%;
 	}
 }

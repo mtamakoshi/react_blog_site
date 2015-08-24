@@ -1,12 +1,33 @@
 
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,300);
 @import url(http://fonts.googleapis.com/css?family=Ek+Mukta:400,800,200,300);
 @import url(http://fonts.googleapis.com/css?family=Fanwood+Text:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,300,700);
+@import url(https://fonts.googleapis.com/css?family=Macondo+Swash+Caps);
 
 // body {
 // 	font-family: 'Ek Mukta', sans-serif;
 // 	font-weight: lighter;
 // }
+.logo {
+	margin-top: 30px;
+
+  .logoName {
+	 padding: 40px 0;
+	 font-family: 'Josefin Slab', serif;
+	 font-size: 45px;
+	 text-align: center;
+	 letter-spacing: 5px;
+  }
+  .logoName:hover {
+  	color: #222;
+  	cursor: pointer;
+  }
+  .logoName:first-letter {
+  	  font-family: 'Macondo Swash Caps', cursive;
+  	  font-size: 55px;
+  }
+}
+
 a {
 	text-decoration: none !important;
 	color: #131313;
@@ -21,8 +42,8 @@ nav {
 			color: #FFF;
 		}
 		li.navLi {
-			font-family: 'Ek Mukta', sans-serif;
-			font-weight: lighter;
+			font-family: 'Josefin Slab', serif;
+			font-weight: light;
 			color: #FFF;
 			font-size: 16px;
 			display: inline;
@@ -54,10 +75,18 @@ img#logo:hover {
 	// border-radius: 25px;
 			
 }
+
+.home {
+	// background-image: url("background.png");
+	background-repeat: repeat;
+	height: 100vh;
+}
+
 .title{	
-	margin: 20% auto;
+	// margin: 50% auto;
+	padding-top: 20%;
 	color: #131313;
-	font-size: 100px;
+	font-size: 80px;
 	text-align: center;
 	font-family: 'Ek Mukta', sans-serif;
 	font-weight: lighter;
@@ -95,19 +124,27 @@ img#logo:hover {
       -28px 56px 1px #e4e3e2;
   }
 
+  .title:first-letter {
+  	  font-family: 'Macondo Swash Caps', cursive;
+  	  font-size: 120px;
+  }
 .enter {
 	@extend .title;
-	margin: auto;
+	// padding-top: 10%;
+	padding: 0;
 	font-size: 50px;
-	transition-property: color text-shadow font-weight;
+	margin: 10%;
+	transition-property: color text-shadow;
 	transition-duration: 0.3s;
     transition-timing-function: linear;
+}
+.enter:first-letter {
+	font-family: 'Ek Mukta', sans-serif;
 }
 
 .enter:hover {
 	color: rgba(255, 101, 0, 0.9);
 	text-shadow: none;
-	font-weight: light;
 }
 
 

@@ -46,7 +46,7 @@ var PostForm = React.createClass({
 			      <p><input type="text" ref="title" name="post[title]" placeholder="Title" className="formBox" /></p>
 			      <p><textarea ref="body" name="post[body]" placeholder="Post content" row="10" className="formBox" /></p>
 			      <p><input type="file" ref="photo" name="post[photo]" onChange={this.handleFile} className="fileUploader"/></p>
-			      <button classNAME="button" type="submit">SUBMIT</button>
+			      <button className="button" type="submit">SUBMIT</button>
 			    </form>
 			  </div>
 			</div>
