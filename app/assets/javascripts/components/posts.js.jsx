@@ -7,7 +7,7 @@ var Post = React.createClass({
 			  <div className="post col-md-6 col-md-offset-3">
 				<p className="postTitle">{this.props.title}</p>
 				<p className="postDate">Written on {this.props.created_at}</p>
-				<p className="postBody" maxVisible={2}>{this.props.body}</p>
+				<p className="postBody">{this.props.body}</p>
 				<p className="postPhoto">{this.props.photo_file_name}</p>
 				<p className="btn"><a className="button postPath" href={postPath}>Read More</a></p>
 			  </div>

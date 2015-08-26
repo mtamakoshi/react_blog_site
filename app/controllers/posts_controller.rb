@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 
 
   def to_json
-    super.merge('created_at' => created_at.strftime("%B %d %Y"))
+    super.merge('created_at' => self.created_at.strftime("%B %d %Y"))
     
   end
 
