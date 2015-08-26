@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
   end
 
   # GET /posts/1
@@ -13,9 +13,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+
   # GET /posts/new
   def new
-    @presenter = {
+    @presenting = {
       posts: Post.last(5).reverse,
       form: {
         action: posts_path,
@@ -27,6 +28,12 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+  end
+
+
+  def to_json
+    super.merge('created_at' => created_at.strftime("%B %d %Y"))
+    
   end
 
   # POST /posts
@@ -68,12 +75,12 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
+    # def set_post
+    #   @post = Post.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :photo)
     end
 end

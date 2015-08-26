@@ -1,4 +1,8 @@
 <%= react_component("PostDetail", {:post => @post}) %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
+
+  <div class="col-md-2 col-md-offset-3 backBtnBox">
+	<%= link_to 'Back', posts_path, :class =>'backBtn' %>
+  </div>
+
