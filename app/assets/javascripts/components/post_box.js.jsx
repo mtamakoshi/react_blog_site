@@ -19,7 +19,7 @@ var PostBox = React.createClass({
 			  <div className="post-container">
 			  <PostForm form={this.state.form} onPostSubmit={this.handlePostSubmit} />	
 			  </div>		
-			  <PostList posts={this.state.posts.reverse()} />
+			  <PostList posts={this.state.posts} />
 			</div>
 
 		);

@@ -32,7 +32,7 @@ var PostList = React.createClass({
   				   </a>
   				</div>
 				<div className="postList col-md-8 col-md-offset-2">
-					{postNodes.reverse()}
+					{postNodes}
 				</div>
 			  </div>
 		    </div>
